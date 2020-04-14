@@ -21,37 +21,39 @@ def selection_sort(arr):
 # TO-DO:  implement the Bubble Sort function below
 
 
-
-
-
-
 # STRETCH: implement the Count Sort function below
 def count_sort(arr, maximum=-1):
 
     return arr
 
 
-# def bubble_sort(arr):
-#     arr_size = len(arr) - 1
-#     for i in range(arr_size):
-#         for j in range(arr_size - i):
-#             if arr[j] > arr[j + 1]:
-#                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
-#     return arr
+def bubble_sort(arr):
+    arr_size = len(arr) - 1
+    for i in range(arr_size):
+        for j in range(arr_size - i):
+            if arr[j] > arr[j + 1]:
+                temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j+1] = temp
+                # arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
 
 
-# print(bubble_sort([3, 9, 5, 4, 3, 6, 7, 1]))
+print(bubble_sort([9, 3, 4, 5, 6, 3, 1, 2, 44, 11, 8, 33]))
+
 
 def insertion_sort(arr):
-  # loop through n-1 elements
-  for i in range(1, len(arr)):
-    temp = arr[i]
-    j = i
-    while j > 0 and temp < arr[j - 1]:
-      # shift left until correct position found
-      arr[j] = arr[j - 1]
-      j -= 1
-    # insert at correct position
-    arr[j] = temp
+    # loop through n-1 elements
+    for i in range(1, len(arr)):
+        temp = arr[i]
+        j = i
+        while j > 0 and temp < arr[j - 1]:
+            # shift left until correct position found
+            arr[j] = arr[j - 1]
+            j -= 1
+        # insert at correct position
+        arr[j] = temp
 
-  return arr
+    return arr
+
+
