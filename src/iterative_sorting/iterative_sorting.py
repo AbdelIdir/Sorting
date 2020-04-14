@@ -38,8 +38,36 @@ def bubble_sort(arr):
                 # arr[j], arr[j + 1] = arr[j + 1], arr[j]
     return arr
 
+# old way
+
+
+def swap(arr, idx1, idx2):
+    temp = arr[idx1]
+    arr[idx1] = arr[idx2]
+    arr[idx2] = temp
+
+# new way
+
+
+def swap_function(arr, idx1, idx2):
+    [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
+
 
 print(bubble_sort([9, 3, 4, 5, 6, 3, 1, 2, 44, 11, 8, 33]))
+
+
+# optimized bubble_sort
+
+def opti_bubble_sort(arr):
+    arr_size = len(arr) - 1
+
+    for i in range(arr_size):
+        for j in range(arr_size - i):
+            if arr[j] > arr[j + 1]:
+                swap(arr, j, j+1)
+    return arr
+
+print(opti_bubble_sort([99, 34, 56, 78, 12, 34, 454, 2, 1, 4, 5, 7]))
 
 
 def insertion_sort(arr):
@@ -55,5 +83,3 @@ def insertion_sort(arr):
         arr[j] = temp
 
     return arr
-
-
