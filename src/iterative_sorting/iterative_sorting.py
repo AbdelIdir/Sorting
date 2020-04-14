@@ -60,14 +60,19 @@ print(bubble_sort([9, 3, 4, 5, 6, 3, 1, 2, 44, 11, 8, 33]))
 
 def opti_bubble_sort(arr):
     arr_size = len(arr) - 1
-
+    no_swaps = True
     for i in range(arr_size):
         for j in range(arr_size - i):
             if arr[j] > arr[j + 1]:
-                swap(arr, j, j+1)
+                swap(arr, j, j + 1)
+                no_swaps = False
+        if no_swaps:
+            break
     return arr
 
-print(opti_bubble_sort([99, 34, 56, 78, 12, 34, 454, 2, 1, 4, 5, 7]))
+
+print(opti_bubble_sort([99, 34, 2345, 566767,
+                        3454545, 56, 78, 12, 34, 454, 2, 1, 4, 5, 7]))
 
 
 def insertion_sort(arr):
