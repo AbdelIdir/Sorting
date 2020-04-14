@@ -61,8 +61,8 @@ print(bubble_sort([9, 3, 4, 5, 6, 3, 1, 2, 44, 11, 8, 33]))
 def opti_bubble_sort(arr):
     arr_size = len(arr) - 1
     no_swaps = True
-    for i in range(arr_size):
-        for j in range(arr_size - i):
+    for i in range(0,arr_size):
+        for j in range(0,arr_size - i):
             if arr[j] > arr[j + 1]:
                 swap(arr, j, j + 1)
                 no_swaps = False
