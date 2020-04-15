@@ -26,7 +26,7 @@ def merge_sort_in_place(arr, l, r):
     return arr
 
 
-def merge(array, left_index, right_index, middle):
+def mergeF(array, left_index, right_index, middle):
     # Make copies of both arrays we're trying to merge
 
     # The second parameter is non-inclusive, so we have to increase by 1
