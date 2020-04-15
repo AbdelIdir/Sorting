@@ -57,7 +57,8 @@ def merge(array, left_index, right_index, middle):
         sorted_index = sorted_index + 1
 
     # We ran out of elements either in left_copy or right_copy
-    # so we will go through the remaining elements and add them
+    # so we will go through th
+    # e remaining elements and add them
     while left_copy_index < len(left_copy):
         array[sorted_index] = left_copy[left_copy_index]
         left_copy_index = left_copy_index + 1
